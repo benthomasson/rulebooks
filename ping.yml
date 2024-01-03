@@ -1,0 +1,14 @@
+---
+- name: Noop
+  hosts: all
+  sources:
+    - benthomasson.eda.ping:
+        dest: 127.0.0.1
+        count: 10
+        timeout: 1
+  rules:
+    - name: debug
+      condition: true
+      action:
+        debug:
+...
